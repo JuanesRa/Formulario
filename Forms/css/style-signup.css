@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(/img/darkSpace.jpg);
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 10px;
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 20px; 
+}
+
+nav ul li a:hover{
+    color: var(--negro);
+    background-color: var(--blanco);
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+/* Estilo para el logo */
+
+.logo img{
+    cursor: pointer;
+    margin-left: 20px;
+    width: 100px;
+}
+
+/* Estilo formulario */
+
+.contenido {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 10px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.label-input label {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.label-input input {
+    padding: 10px;
+    height: 10px;
+    border: 1px solid var(--gris);
+    border-radius: 3px;
+    outline: none;
+}
+
+.label-input select {
+    padding: 10px;
+    height: 40px;
+    border: 1px solid var(--gris);
+    border-radius: 3px;
+    outline: none;
+}
+
+.label-input input:focus {
+    border-color: var(--gris);
+}
+
+.centrar-boton {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boton{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.boton:hover{
+    background-color: var(--blanco);
+    color: var(--negro);
+    transition: 0.3s;
+}

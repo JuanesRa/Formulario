@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-signup.css">
+    <link rel="icon" href="img/nasa.png">
+    <script src="validaciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Registro</title>    
+</head>
+<body>
+    <nav>
+        <!-- Espacio para el logo en el lado izquierdo -->
+        <div class="logo">
+            <a href="index.html"><img src="img/nasaEmblema.png" alt=""></a>
+        </div>
+        <!-- Elementos de navegación en el lado derecho -->
+        <ul>
+            <li><a href="busqueda.html">Formulario búsqueda</a></li>
+            <li><a href="login.html">Formulario login</a></li>
+        </ul>
+    </nav>
+    <div class="contenido">
+        <form class="formulario" action="#" onsubmit="return validarFormulario()">
+            <div class="container">
+                <div class="title">
+                    <h5>Formulario de registro</h5>
+                </div>
+                <div class="label-input">
+                    <label for="">Nombre completo</label>
+                    <input type="text" name="nombreCompleto">
+                </div>
+                <div class="label-input">
+                    <label for="">Correo electrónico</label>
+                    <input type="email" name="correoElectronico">
+                </div>
+                <div class="label-input">
+                    <label for="">Número de teléfono</label>
+                    <input type="text" name="numeroTelefono">
+                </div>
+                <div class="label-input">
+                    <label for="">Nacionalidad</label>
+                    <input type="text" name="nacionalidad">
+                </div>
+                <div class="label-input">
+                    <label for="">Fecha de nacimiento</label>
+                    <input type="date" name="fechaNacimiento">
+                </div>
+                <div class="label-input">
+                    <label for="">Género</label>
+                    <select name="genero">
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                    </select>
+                </div>
+                <div class="label-input">
+                    <label for="">Dirección</label>
+                    <input type="text" name="direccion">
+                </div>
+                <div class="label-input">
+                    <label for="">Profesión</label>
+                    <select name="profesion" id="profesionSelect" onchange="mostrarOtroInput('profesionSelect', 'otraProfesionInput')">
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="Cientifico">Cientifico</option>
+                        <option value="Ingeniero">Ingeniero</option>
+                        <option value="Otro">Otro(especificar)</option>
+                    </select>
+                </div>
+                <div class="label-input otro-input" id="otraProfesionInput">
+                    <label for="">Especifique</label>
+                    <input type="text">
+                </div>
+                <div class="label-input">
+                    <label for="">Área de interés</label>
+                    <select name="areaInteres" id="areaInteresSelect" onchange="mostrarOtroInput('areaInteresSelect', 'otraAreaInput')">
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="Astronomía">Astronomía</option>
+                        <option value="Astronáutica">Astronáutica</option>
+                        <option value="Geología planetaria">Geología planetaria</option>
+                        <option value="Ciencias atmosféricas">Ciencias atmosféricas</option>
+                        <option value="Otro">Otro (especificar)</option>
+                    </select>
+                </div>
+                <div class="label-input otro-input" id="otraAreaInput">
+                    <label for="">Especifique</label>
+                    <input type="text">
+                </div>
+                <div class="centrar-boton">
+                    <input type="submit" value="Enviar" class="boton">
+                </div>
+        </form>
+    </div>
+</body>
+
+</html>

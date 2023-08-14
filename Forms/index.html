@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="img/nasa.png">
+    <title>SpaceX</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector(".busqueda");
+        const searchIcon = document.querySelector(".buscar"); // Changed the selector to match the button
+
+        searchIcon.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            const sanitizedSearchTerm = searchTerm.replace(/\s+/g, "-");
+
+            const targetElement = document.getElementById(sanitizedSearchTerm);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+
+    });
+</script>
+
+<body>
+    <nav>
+        <!-- Espacio para el logo en el lado izquierdo -->
+        <div class="logo">
+            <a href="index.html"><img src="img/nasaEmblema.png" alt=""></a>
+        </div>
+        <!-- Elementos de navegación en el lado derecho -->
+        <ul>
+            <li class="search-icon">
+                <input type="text" class="busqueda">
+                <button type="submit" class="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </li>
+            <li><a href="busqueda.html">Formulario búsqueda</a></li>
+            <li><a href="signup.html">Formulario registro</a></li>
+            <li><a href="login.html">Formulario login</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenido">
+        <div class="sobre-la-nasa" id="sobre-la-nasa">
+            <p>
+                <span class="subtitulo">Sobre la NASA: Explorando los Límites del Espacio</span><br><br><br>
+
+                La Administración Nacional de Aeronáutica y del Espacio, conocida mundialmente como NASA (por sus siglas
+                en inglés), es la agencia gubernamental de los Estados Unidos encargada de la exploración y la
+                investigación en el campo de la aeronáutica y la astronáutica. Fundada el 29 de julio de 1958, la NASA
+                se ha convertido en un símbolo icónico de la búsqueda humana por entender el universo que nos rodea y
+                llevar a cabo misiones pioneras en la exploración espacial.<br><br>
+
+                <img src="/img/nasaPro.PNG" class="imagen" alt=""><br><br>
+
+            </p>
+        </div>
+        <div class="mision" id="mision">
+            <p>
+                <span class="subtitulo">Misión y Objetivos:</span><br><br><br>
+
+                La misión fundamental de la NASA es llevar a cabo investigaciones científicas y desarrollar tecnologías
+                avanzadas que permitan la exploración espacial, el descubrimiento de nuevos conocimientos sobre el
+                cosmos y la mejora de la vida en la Tierra. Los objetivos principales de la NASA incluyen: <br><br>
+
+                <span class="sub-subtitulo">Exploración Espacial: </span>La NASA ha llevado a cabo misiones tripuladas y
+                no tripuladas para explorar
+                nuestro sistema solar y más allá. Desde las misiones Apollo a la Luna hasta los rovers en Marte y las
+                sondas que exploran los planetas exteriores, la NASA ha desempeñado un papel crucial en la expansión de
+                nuestro entendimiento del espacio. <br>
+            </p>
+        </div>
+        <div class="investigacion" id="investigacion">
+            <p>
+                <span class="sub-subtitulo">Investigación Científica: </span>La agencia realiza investigaciones en una
+                amplia gama de áreas científicas,
+                incluyendo astrofísica, ciencia planetaria, ciencias de la Tierra y heliofísica. Estas investigaciones
+                ayudan a responder preguntas fundamentales sobre la formación del universo, la evolución de los planetas
+                y el clima de la Tierra. <br>
+            </p>
+        </div>
+        <div class="desarrollo" id="desarrollo">
+            <p>
+                <span class="sub-subtitulo">Desarrollo Tecnológico: </span>
+                La NASA es pionera en el desarrollo de tecnologías innovadoras que van desde
+                sistemas de propulsión avanzados hasta sistemas de soporte vital en el espacio. Muchas de estas
+                tecnologías encuentran aplicaciones en la vida cotidiana, como en la medicina, las comunicaciones y la
+                energía. <br>
+            </p>
+        </div>
+        <div class="colaboracion" id="colaboracion">
+            <p>
+                <span class="sub-subtitulo">Colaboración Internacional: </span>La NASA trabaja en estrecha colaboración
+                con otras agencias espaciales y
+                organizaciones científicas de todo el mundo para llevar a cabo misiones conjuntas y compartir datos
+                científicos. Esta cooperación global ha permitido avances significativos en la exploración
+                espacial.<br><br>
+            </p>
+        </div>
+        <div class="logros" id="logros">
+            <p>
+                <span class="subtitulo">Logros Destacados:</span><br><br><br>
+
+                A lo largo de su historia, la NASA ha acumulado una serie de logros notables, entre ellos: <br><br>
+
+                <span class="sub-subtitulo" id="apolo">Apolo 11: </span>En 1969, la NASA logró el histórico alunizaje de
+                la misión Apollo 11, convirtiendo a Neil
+                Armstrong y Edwin "Buzz" Aldrin en los primeros seres humanos en caminar sobre la superficie lunar.
+                <br><br>
+
+                <img src="/img/apolo11.jpg" class="imagen" alt=""><br><br>
+
+                <span class="sub-subtitulo" id="estacion-espacial">Estación Espacial Internacional (EEI): </span>En
+                colaboración con otras agencias, la NASA ha sido fundamental
+                en la construcción y operación de la EEI, un laboratorio de investigación en órbita que ha permitido
+                investigaciones científicas y tecnológicas a largo plazo. <br><br>
+
+                <img src="/img/estacion-espacial.jpg" class="imagen" alt=""><br><br>
+
+                <span class="sub-subtitulo" id="mars-rover">Mars Rovers: </span>Los rovers Spirit, Opportunity y
+                Curiosity han explorado la superficie de Marte,
+                proporcionando datos cruciales sobre la historia geológica y la posibilidad de vida pasada en el planeta
+                rojo. <br><br>
+
+                <img src="/img/mars-rover.jpg" class="imagen" alt=""><br><br>
+
+                <span class="sub-subtitulo" id="hubble-james">Misiones Hubble y Telescopio Espacial James Webb:
+                </span>La NASA ha lanzado y operado varios telescopios
+                espaciales que han revolucionado nuestra comprensión del cosmos, capturando imágenes impresionantes de
+                galaxias distantes y estudiando fenómenos cósmicos. <br><br>
+
+                <img src="/img/hubble.jpg" class="imagen" alt=""><br><br>
+                <img src="/img/james-webb.jpg" class="imagen" alt=""><br><br>
+
+                La NASA sigue siendo un faro de descubrimiento y avance tecnológico, impulsando los límites del
+                conocimiento humano mientras inspira a generaciones futuras a soñar en grande y explorar más allá de los
+                confines de la Tierra.
+            </p>
+
+        </div>
+
+
+</body>
+
+</html>

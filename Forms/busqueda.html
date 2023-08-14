@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-search.css">
+    <link rel="icon" href="img/nasa.png">
+    <title>Formulario de Búsqueda</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        var paginas = {
+            "login": "login.html",
+            "registro": "signup.html"
+        };
+        function buscar() {
+            var consulta = document.querySelector('input[name="consulta"]').value.toLowerCase();
+
+            if (consulta.trim() === "") {
+                Swal.fire(
+                    '',
+                    'Por favor, ingresa un término de búsqueda.',
+                    'question'
+                )
+                return false;
+            }
+
+            var enlaceResultado = document.querySelector('.enlace-resultado');
+
+            if (paginas.hasOwnProperty(consulta)) {
+                enlaceResultado.style.display = 'block';
+                enlaceResultado.querySelector('a').href = paginas[consulta];
+                return false;
+            } else {
+                enlaceResultado.style.display = 'none';
+            }
+            Swal.fire(
+                    '',
+                    "No se encontró ninguna página para la búsqueda: " + consulta,
+                    'info'
+                )
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <!-- Espacio para el logo en el lado izquierdo -->
+        <div class="logo">
+            <a href="index.html"><img src="img/nasaEmblema.png" alt=""></a>
+        </div>
+        <!-- Elementos de navegación en el lado derecho -->
+        <ul>
+            <li><a href="login.html" data-tipo="login">Formulario login</a></li>
+            <li><a href="signup.html" data-tipo="registro">Formulario registro</a></li>
+        </ul>
+    </nav>
+    <div class="contenido">
+        <form class="formulario" action="#" onsubmit="return buscar()">
+            <div class="container">
+                <div class="label-input">
+                    <input type="text" placeholder="registro" name="consulta">
+                </div>
+                <div class="centrar-boton">
+                    <input type="submit" value="Buscar" class="boton">
+                </div>
+            </div>
+        </form>
+        <div class="enlace-resultado" style="display: none;">
+            <a href="#">Ir a la página</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-login.css">
+    <link rel="icon" href="img/nasa.png">
+    <title>Inicio de sesión</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function validarInicioSesion() {
+            var usuario = document.querySelector('input[name="usuario"]');
+            var contraseña = document.querySelector('input[name="contraseña"]');
+    
+            if (usuario.value === "") {
+                Swal.fire(
+                    '',
+                    'Por favor, ingresa tu nombre de usuario.',
+                    'info'
+                )
+                usuario.focus();
+                return false;
+            }
+    
+            if (contraseña.value === "") {
+                Swal.fire(
+                    '',
+                    'Por favor, ingresa tu contraseña.',
+                    'info'
+                )
+                contraseña.focus();
+                return false;
+            }
+    
+            Swal.fire(
+                '',
+                'Formulario enviado con éxito.',
+                'success'
+            );
+    
+            return false;
+        }
+    </script>
+    
+</head>
+
+<body>
+    <nav>
+        <!-- Espacio para el logo en el lado izquierdo -->
+        <div class="logo">
+            <a href="index.html"><img src="img/nasaEmblema.png" alt=""></a>
+        </div>
+        <!-- Elementos de navegación en el lado derecho -->
+        <ul>
+            <li><a href="busqueda.html">Formulario búsqueda</a></li>
+            <li><a href="signup.html">Formulario registro</a></li>
+        </ul>
+    </nav>
+    <div class="contenido">
+        <form class="formulario" action="#" onsubmit="return validarInicioSesion()">
+            <div class="title">
+                <h5>Formulario de inicio de sesión</h5>
+            </div>
+            <div class="container">
+                <div class="label-input">
+                    <label for="">Usuario</label>
+                    <input type="text" name="usuario">
+                </div>
+                <div class="label-input">
+                    <label for="">Contraseña</label>
+                    <input type="password" name="contraseña">
+                </div>
+                <div class="centrar-boton">
+                    <input type="submit" value="Iniciar sesión" class="boton">
+                </div>
+                <div class="texto">
+                    <span>¿No tienes una cuenta? <a href="signup.html">Regístrate</a></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
