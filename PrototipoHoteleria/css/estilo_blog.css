@@ -115,3 +115,258 @@ nav .menu {
     font-size: 18px;
     text-align: justify ;
 }
+
+/* SECCIÓN ARTICULO */
+/* Renderizar contenido */
+
+.contenedor {
+    display: table;
+    margin: 50px 20px 20px 200px;
+}
+
+.union{
+    display: flex;
+}
+
+.articulo .union .cont-principal{
+    display: table-cell;
+    flex: 2;
+    width: 900px;
+    column-count: 2;
+    column-gap: 50px;
+    margin-right: 150px;
+}
+
+.titulo{
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.subtitulo{
+    margin: 20px 0 30px 0;
+}
+
+.publicado{
+    font-size: 13px;
+    font-style: italic;
+    color: gray;
+    
+}
+
+.publicado a{
+    font-style: italic;
+    color: gray;
+    
+}
+
+.articulo p{
+    text-align: justify;
+    
+}
+
+.articulo li{
+    text-align:left;
+    
+}
+
+.articulo img {
+    margin: 30px 0 30px 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos aside */
+
+.lateral {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.lateral h3{
+    margin-top: 10px;
+}
+
+.lateral a{
+    text-decoration: none;
+    color: #000;
+}
+
+.lateral a:hover{
+    text-decoration:underline;
+    color: #00b300;
+}
+
+.lateral img {
+    object-fit: cover;
+}
+
+
+/* SECCIÓN COMENTARIOS */
+
+#comentarios{
+    margin-top: 21px;
+    padding-top: 22px;
+    border-top: 1px solid #D7D7D7;
+}
+
+#comentarios article{
+    display: table;
+    padding: 22px;
+    width: 600px;
+}
+
+#comentarios article:nth-child(odd){
+    padding: 21px;
+    background: #E3E3E3;
+    border: 1px solid #D7D7D7;
+}
+
+#comentarios article div {
+    display: table-cell;
+    width: 220px;
+    padding-right: 22px ;
+
+}
+
+#comentarios article div a{
+    display: block;
+    font-weight: bold;
+    color: #434343;
+}
+
+#comentarios article div a:hover{
+    text-decoration: none;
+}
+
+#comentarios article p{
+    text-align: justify;
+    padding: 0;
+}
+
+
+
+#comentarios h2 {
+    margin: 20px 0 20px 0  ;
+}
+
+/* FORMULARIO */
+
+.formulario {
+    margin-top: 21px;
+    padding-top: 22px;
+    border-top: 1px solid #D7D7D7;
+}
+
+.titulo_form {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.cajaForm{
+    width: 50%;
+    margin: 0;
+}
+
+.input-fields {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 10px 0;
+}   
+
+.input-fields label {
+    /* flex: 1; */
+    justify-content: right;
+    margin-right: 30px;
+}
+
+.input-fields input,
+.input-fields textarea {
+    /* flex: 1; */
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.botonsito{
+    width: 60%;
+    margin: 20px auto;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Estilos Footer */
+footer {
+    margin-top: 50px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translateX(-50%);
+    /* Centra horizontalmente */
+    width: 100%;
+    font-family: 'Victor Mono', monospace;
+}
+
+
+.pie_pag{
+    /* width: 100%; */
+    display: table;
+    background-color: #858484;
+    position: absolute;
+    padding-bottom: 8px;
+
+}
+
+.pie_pag section{
+    display: table-cell;
+    width: 20%;
+    /* text-align: center; */
+    padding-left: 90px;
+    position: relative;
+    
+}
+.pie_pag  section h3{
+    color: #ffffff;
+    text-align: justify;
+}
+.pie_pag section p {
+    text-align: justify;
+    
+}
+
+
+.pie_pag section a {
+    text-align: justify;
+    color: #000;
+    
+}
+
+.pie_pag section ul {
+    list-style: none;
+    text-align: justify;
+}
+
+.pie_pag a:hover{
+    color: #39A900;
+}
+
+.redes i{
+    margin-top: 10px;
+    font-size: 30px;
+    padding-right: 10px;
+    padding-left: 50px;
+}
